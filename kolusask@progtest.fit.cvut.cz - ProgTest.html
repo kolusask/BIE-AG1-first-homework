@@ -1,0 +1,839 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+<!-- saved from url=(0071)https://progtest.fit.cvut.cz/index.php?X=Task&Cou=288&Tgr=1794&Tsk=1612 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>kolusask@progtest.fit.cvut.cz - ProgTest</title>
+  
+  <link href="./kolusask@progtest.fit.cvut.cz - ProgTest_files/css.css" rel="stylesheet" type="text/css">
+  <script src="./kolusask@progtest.fit.cvut.cz - ProgTest_files/shared.js" language="JavaScript" type="text/javascript"></script>
+  
+ </head>
+ <body bgcolor="#828273" text="#000000">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+   <tbody><tr height="25">
+    <td align="left" bgcolor="#00ff00"><span class="navLink"><a class="navLink" href="https://progtest.fit.cvut.cz/index.php?X=Main">ProgTest</a>&nbsp;&nbsp;►&nbsp;&nbsp;<a class="navLink" href="https://progtest.fit.cvut.cz/index.php?X=Course&amp;Cou=288">BIE-AG1 (19/20 ZS)</a>&nbsp;&nbsp;►&nbsp;&nbsp;<a class="navLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskGrp&amp;Cou=288&amp;Tgr=1794">Task 1</a>&nbsp;&nbsp;►&nbsp;&nbsp;<b>Canteen queues</b></span></td>
+    <td align="right" bgcolor="#00ff00"><a class="navLink" href="https://progtest.fit.cvut.cz/index.php?X=Logout">Logout</a></td>
+   </tr>
+  </tbody></table>
+<br>
+
+
+
+
+ <br>
+ <br>
+   <center>
+   <div class="topLayout">
+    <div class="outBox">
+     <table class="header" width="100%" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+       <td class="header"><b>Canteen queues</b></td>
+      </tr>
+     </tbody></table>
+    </div>
+   </div>
+  </center>
+ <form name="form1" method="post" action="https://progtest.fit.cvut.cz/index.php?X=TaskU&amp;Cou=288&amp;Tgr=1794&amp;Tsk=1612" enctype="multipart/form-data">
+  <center>
+    <div class="topLayout">
+     <div class="outBox">
+      <table width="100%" border="0" cellspacing="0" cellpadding="2" id="maintable">
+       <colgroup><col width="200">
+       <col>
+       <col width="130">
+
+       </colgroup><tbody><tr>
+        <td class="ltCell" align="left"><b>Submission deadline:</b></td>
+        <td class="tCell" align="left"><b>2019-10-20 23:59:59</b></td>
+        <td class="rtCell" align="right" id="countdown">1128041.473 sec</td>
+       </tr>
+
+       <tr>
+        <td class="lCell" align="left"><b>Evaluation:</b></td>
+        <td class="rCell" colspan="2" align="left"><b>7.5000</b></td>
+       </tr>
+       <tr>
+        <td class="lCell" align="left"><b>Max. assessment:</b></td>
+        <td class="rCell" colspan="2" align="left"><b>2.0000</b> (Without bonus points)</td>
+       </tr>
+       <tr>
+        <td class="lCell" align="left"><b>Submissions:</b></td>
+        <td class="rCell" colspan="2" align="left">7 /  25</td>
+       </tr>
+
+       <tr>
+        <td class="lbCell" align="left"><b>Advices:</b></td>
+        <td class="rbCell" colspan="2" align="left">0 / 0</td>
+       </tr>
+
+       <tr>
+        <td class="lrtbCell" colspan="3" align="left"><p>
+After well spent holidays, you are back at the school. Unfortunately you haven't managed to acquire a decent timetable and so for the most of the week
+you have almost no time to get a lunch. Nevertheless, you thought you could always pay a quick visit to the school canteen, which shouldn't take more
+than a few minutes. However, your first lunch in the canteen didn't go as planned. You spent an hour stuck in the queue, because the campus is full of
+confused first-year students. Luckily, you aren't a rookie anymore, and so you can utilize some of the dirty tricks you learned, in order to get to the canteen counter faster.
+</p>
+
+<p>
+You will be situated at the canteen with two queues, which don't move whatsoever. Your task is to get to the canteen counter in the shortest possible time.
+During a single unit of time, you can perform one of the following actions:
+</p><ol>
+  <li>either you can jump the queue you are currently standing in (i.e. move one position in the queue forward), </li>
+  <li>or you can let the person behind you take your position, and move one position in the queue backwards,</li>
+  <li>or you can use your connections and switch places with a friend, who is standing in the adjacent queue several positions in front of you (the number of positions will be given in the input).</li>
+</ol>
+In both of the queues are inappropriate people for you to switch positions with — e.g. professors, or classmates, who regularly visit a gym.
+You can't move to these positions in the queue (not even if you were to offer a better position in the queue).
+On top of that you need to act fast, as the floor in the canteen will soon be cleaned by a cleaning lady.
+By no means you can appear on a cleaned part of the floor.
+<p></p>
+
+<p>
+You will be given the length of the queues (it is the same for both of them), a specific number of positions, by which you can move to the adjacent queue, and a description
+of the queues with marked positions of the inappropriate people.
+The canteen counter is reached after you appear at an arbitrary position beyond the end of any of the two queues.
+Movement beyond the end of a queue is always possible.
+Movement to the adjacent queue is possible only by the given number of positions given in the input, never less.
+That means if it is possible to move to the adjacent queue by <tt>K</tt> positions, you can move from position <tt>X</tt> in one queue to position <tt>X + K</tt> in the other queue.
+After performing an action, the length of the queues stays the same (there are always two people switching positions) and similarly the positions of the inappropriate people never
+change (the exchange of positions always takes place between you at a reachable position and a person suitable for exchanging positions).
+The cleaning lady cleans the floor in such a way, that in time <tt>i</tt> the floor at <tt>i</tt>-th positions from the beginnings of the queues is cleaned.
+That means in time <tt>i</tt> you can never appear at <tt>i</tt>-th, or lower, position from the beginning of a queue.
+Time starts at <tt>0</tt> and increases by <tt>1</tt> every time you perform an action.
+Therefore, first you perform and action and then the cleaning lady cleans the floor at positions <tt>1</tt>. Afterwards you again perform an action and cleaning lady cleans the floor
+at positions <tt>2</tt> etc...
+You start in the left queue at the first position (there will never be an inappropriate person standing there).
+It is possible for the canteen counter to be unreachable by any sequence of steps. 
+</p>
+
+<p>
+<b>Input Format:</b>
+</p><ul>
+ <li>
+   On the first line there are two numbers; number <tt>N</tt> specifying the length of the queues and number <tt>K</tt> specifying the number of positions by which you can move to the adjacent queue.
+   You can assume that <tt>1 ≤ K ≤ N</tt> holds.
+ </li>
+ <li>
+   On the second and third line are consecutively descriptions of left and right queues (in this order). The description of a queue is a string of length <tt>N</tt> consisting of characters <tt>'.'</tt>
+   (a position you can move to) and <tt>'x'</tt> (a position with an inappropriate person, which you can't move to).
+ </li>
+ <li>
+   The numbering of positions in the queue is one-based; their numbers are thus <tt>1, ..., N</tt>. The canteen counter is thus reached by appearing at an imagined position <tt>N + 1</tt>, or higher, in
+   an arbitrary queue.
+ </li>
+ <li>
+   You can assume the input is valid.
+ </li>
+</ul>
+<p></p>
+
+<p>
+<b>Output Format:</b>
+</p><ul>
+ <li>
+   Output consists of a single row. If there is a way to reach the canteen counter, output the minimal number of actions needed to do so.
+   Should there be no such way, output <tt>-1</tt>.
+ </li>
+</ul> 
+<p></p>
+
+<p>
+<b>Classification Conditions:</b>
+</p><ol>
+  <li>
+    To pass the compulsory tests (basic and small data tests), your solution has to return correct answers for queues of length at most 20.
+  </li>
+  <li>
+    To pass the test on medium dataset, your solution has to output correct answers within the time and memory limit for queues of length at most 1&nbsp;000.
+  </li>
+  <li>  
+    To pass the test on large dataset, your solution has to output correct answers within the time and memory limit for queues of length at most 100&nbsp;000.
+  </li>
+</ol>
+<p></p>
+
+<b>Examples:</b><br>
+<hr>
+<b>Input example 1:</b><br>
+<pre>5 2
+....x
+.xx.x
+</pre>
+
+<b>Output example 1:</b><br>
+<pre>3
+</pre>
+
+<hr>
+<b>Input example 2:</b><br>
+<pre>10 4
+.xx.x...xx
+x.x....x..
+</pre>
+<b>Output example 2:</b><br>
+<pre>4
+</pre>
+
+<hr>
+<b>Input example 3:</b><br>
+<pre>5 1
+..x..
+..xx.
+</pre>
+<b>Output example 3:</b><br>
+<pre>-1
+</pre>
+</td>
+       </tr>
+
+
+
+
+
+
+
+       <tr>
+ 
+        <td class="ltbCell" align="left" valign="top"><b>Submit:</b></td>
+        <td class="tbCell" align="left" valign="top"><input type="file" class="std" name="FILE"></td>
+        <td class="rtbCell" valign="top"><div class="w120 outButton"><input type="submit" name="S" value="Submit" class="updButton"></div></td>
+ 
+       </tr>
+
+
+
+
+
+
+
+
+      </tbody></table>
+     </div>
+    </div>
+
+
+ <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table width="100%" border="0" cellspacing="0" cellpadding="2" id="reftable">
+   <tbody><tr>
+    <td class="ltbSepCell" align="left"><input type="checkbox" name="SHOW_REF" onchange="showRefSolution()">&nbsp;<b>Reference</b></td>
+    <td class="rtbSepCell" align="right">&nbsp;</td>
+   </tr>
+   <tr style="display: none;">
+    <td class="lrtbCell" align="left" colspan="2"><ul><li><b>Evaluator: computer</b><ul><li>Program compiled</li><li>Test 'Základní test ukázkovými daty': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.008 s (limit: 2.000 s)</li><li>Total run time: 0.021 s</li><li>Peak mem usage: 14828 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test malými daty': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.009 s (limit: 2.000 s)</li><li>Total run time: 0.420 s (limit: 10.000 s)</li><li>Peak mem usage: 14828 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test středními daty': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.009 s (limit: 2.000 s)</li><li>Total run time: 0.204 s (limit: 10.000 s)</li><li>Peak mem usage: 14828 KiB (limit: 125570 KiB)</li><li>Bonus test - success, evaluation: 300.00 %</li></ul></li>
+<li>Test 'Test velkými daty': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.018 s (limit: 2.000 s)</li><li>Total run time: 0.253 s (limit: 10.000 s)</li><li>Peak mem usage: 14828 KiB (limit: 125570 KiB)</li><li>Bonus test - success, evaluation: 167.00 %</li></ul></li>
+<li>Overall ratio: 501.00 % (= 1.00 * 1.00 * 3.00 * 1.67)</li></ul></li><li>Total percent: 501.00 %</li><li>Early submission bonus: 0.50</li><li>Total points: 5.01 * ( 2.00 + 0.50 ) = 12.53</li></ul></td>
+   </tr>
+    <tr style="display: none;">
+  <td class="ltbCell" align="left"><b>SW metrics:</b></td>
+  <td class="rtbCell" colspan="2" align="left">
+   <table border="0" cellpadding="2">
+    <tbody><tr>
+     <td>&nbsp;</td>
+     <td class="ac">Total</td>
+     <td class="ac">Average</td>
+     <td class="ac">Maximum</td>
+     <td>Function name</td>
+    </tr>
+    <tr>
+     <td>Functions:</td>
+     <td class="ar"><b>2</b></td>
+     <td class="ar">--</td>
+     <td class="ar">--</td>
+     <td>--</td>
+    </tr>
+    <tr>
+     <td>Lines of code:</td>
+     <td class="ar"><b>36</b></td>
+     <td class="ar"><span class="textOk">18.00 ± 14.00</span></td>
+     <td class="ar"><span class="textOk">32</span></td>
+     <td><tt>main</tt></td>
+    </tr>
+    <tr>
+     <td>Cyclomatic complexity:</td>
+     <td class="ar"><b>13</b></td>
+     <td class="ar"><span class="textOk">6.50 ± 4.50</span></td>
+     <td class="ar"><span class="textOk">11</span></td>
+     <td><tt>main</tt></td>
+    </tr>
+   </tbody></table>
+  </td>
+ </tr>
+   </tbody></table>
+  </div>
+ </div>
+
+
+
+
+ <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table width="100%" border="0" cellspacing="0" cellpadding="2" id="maintable">
+    <colgroup><col width="200">
+    <col>
+    <col width="130">
+
+   </colgroup><tbody><tr>
+    <td class="ltbOkSepCell" align="left"><b>7</b></td>
+    <td class="tbOkSepCell" align="left"><b>2019-10-07 20:31:06</b></td>
+    <td class="rtbOkSepCell" align="center"><div class="but1 w120"><div class="but2"><a class="butLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskD&amp;Cou=288&amp;Tgr=1794&amp;Tsk=1612&amp;Sub=1085610">Download</a></div></div></td>
+   </tr>
+   <tr>
+    <td class="ltCell" align="left"><b>Submission status:</b></td>
+    <td class="tCell" align="left">Evaluated</td>
+
+
+
+    <td class="rtbCell" rowspan="2">&nbsp;</td>
+
+
+   </tr>
+
+   <tr>
+    <td class="lbCell" align="left"><b>Evaluation:</b></td>
+    <td class="bCell" align="left">7.5000</td>
+   </tr>   <tr>
+    <td class="lrtbCell" colspan="3" align="left"><ul><li><b>Evaluator: computer</b><ul><li>Program compiled</li><li>Test 'Basic test using example data': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.005 s (limit: 2.000 s)</li><li>Total run time: 0.015 s</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on small dataset': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.006 s (limit: 2.000 s)</li><li>Total run time: 0.275 s (limit: 10.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on medium dataset': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.006 s (limit: 2.000 s)</li><li>Total run time: 0.139 s (limit: 10.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Bonus test - success, evaluation: 300.00 %</li></ul></li>
+<li>Test 'Test on large dataset': Abnormal program termination  (Time limit exceeded)<ul><li>Program was killed after: 2.002 s (limit: 2.000 s)</li><li>Peak mem usage: 23884 KiB (limit: 125570 KiB)</li><li>Bonus test - failed, evaluation: No bonus awarded</li><li>Time limit exceeded</li></ul></li>
+<li>Overall ratio: 300.00 % (= 1.00 * 1.00 * 3.00)</li></ul></li><li>Total percent: 300.00 %</li><li>Early submission bonus: 0.50</li><li>Total points: 3.00 * ( 2.00 + 0.50 ) = 7.50</li></ul></td>
+   </tr> <tr>
+  <td class="ltbCell" align="left"><b>SW metrics:</b></td>
+  <td class="rtbCell" colspan="2" align="left">
+   <table border="0" cellpadding="2">
+    <tbody><tr>
+     <td>&nbsp;</td>
+     <td class="ac">Total</td>
+     <td class="ac">Average</td>
+     <td class="ac">Maximum</td>
+     <td>Function name</td>
+    </tr>
+    <tr>
+     <td>Functions:</td>
+     <td class="ar"><b>4</b></td>
+     <td class="ar">--</td>
+     <td class="ar">--</td>
+     <td>--</td>
+    </tr>
+    <tr>
+     <td>Lines of code:</td>
+     <td class="ar"><b>51</b></td>
+     <td class="ar"><span class="textOk">12.75 ± 7.63</span></td>
+     <td class="ar"><span class="textOk">25</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+    <tr>
+     <td>Cyclomatic complexity:</td>
+     <td class="ar"><b>16</b></td>
+     <td class="ar"><span class="textOk">4.00 ± 2.92</span></td>
+     <td class="ar"><span class="textOk">9</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+   </tbody></table>
+  </td>
+ </tr>   </tbody></table>
+  </div>
+ </div> <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table width="100%" border="0" cellspacing="0" cellpadding="2" id="maintable">
+    <colgroup><col width="200">
+    <col>
+    <col width="130">
+
+   </colgroup><tbody><tr>
+    <td class="ltbOkSepCell" align="left"><b>6</b></td>
+    <td class="tbOkSepCell" align="left"><b>2019-10-07 19:48:46</b></td>
+    <td class="rtbOkSepCell" align="center"><div class="but1 w120"><div class="but2"><a class="butLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskD&amp;Cou=288&amp;Tgr=1794&amp;Tsk=1612&amp;Sub=1085592">Download</a></div></div></td>
+   </tr>
+   <tr>
+    <td class="ltCell" align="left"><b>Submission status:</b></td>
+    <td class="tCell" align="left">Evaluated</td>
+
+
+
+    <td class="rtbCell" rowspan="2">&nbsp;</td>
+
+
+   </tr>
+
+   <tr>
+    <td class="lbCell" align="left"><b>Evaluation:</b></td>
+    <td class="bCell" align="left">2.5000</td>
+   </tr>   <tr>
+    <td class="lrtbCell" colspan="3" align="left"><ul><li><b>Evaluator: computer</b><ul><li>Program compiled</li><li>Test 'Basic test using example data': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.006 s (limit: 2.000 s)</li><li>Total run time: 0.018 s</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on small dataset': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.006 s (limit: 2.000 s)</li><li>Total run time: 0.312 s (limit: 10.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on medium dataset': Abnormal program termination  (Time limit exceeded)<ul><li>Program was killed after: 2.001 s (limit: 2.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Bonus test - failed, evaluation: No bonus awarded</li><li>Time limit exceeded</li></ul></li>
+<li>Test 'Test on large dataset': Not tested<ul><li>Bonus test - failed, evaluation: No bonus awarded</li></ul></li>
+<li>Overall ratio: 100.00 % (= 1.00 * 1.00)</li></ul></li><li>Total percent: 100.00 %</li><li>Early submission bonus: 0.50</li><li>Total points: 1.00 * ( 2.00 + 0.50 ) = 2.50</li></ul></td>
+   </tr> <tr>
+  <td class="ltbCell" align="left"><b>SW metrics:</b></td>
+  <td class="rtbCell" colspan="2" align="left">
+   <table border="0" cellpadding="2">
+    <tbody><tr>
+     <td>&nbsp;</td>
+     <td class="ac">Total</td>
+     <td class="ac">Average</td>
+     <td class="ac">Maximum</td>
+     <td>Function name</td>
+    </tr>
+    <tr>
+     <td>Functions:</td>
+     <td class="ar"><b>4</b></td>
+     <td class="ar">--</td>
+     <td class="ar">--</td>
+     <td>--</td>
+    </tr>
+    <tr>
+     <td>Lines of code:</td>
+     <td class="ar"><b>57</b></td>
+     <td class="ar"><span class="textOk">14.25 ± 8.47</span></td>
+     <td class="ar"><span class="textOk">28</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+    <tr>
+     <td>Cyclomatic complexity:</td>
+     <td class="ar"><b>18</b></td>
+     <td class="ar"><span class="textOk">4.50 ± 3.77</span></td>
+     <td class="ar"><span class="textOk">11</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+   </tbody></table>
+  </td>
+ </tr>   </tbody></table>
+  </div>
+ </div> <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table width="100%" border="0" cellspacing="0" cellpadding="2" id="maintable">
+    <colgroup><col width="200">
+    <col>
+    <col width="130">
+
+   </colgroup><tbody><tr>
+    <td class="ltbFailSepCell" align="left"><b>5</b></td>
+    <td class="tbFailSepCell" align="left"><b>2019-10-07 19:33:09</b></td>
+    <td class="rtbFailSepCell" align="center"><div class="but1 w120"><div class="but2"><a class="butLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskD&amp;Cou=288&amp;Tgr=1794&amp;Tsk=1612&amp;Sub=1085579">Download</a></div></div></td>
+   </tr>
+   <tr>
+    <td class="ltCell" align="left"><b>Submission status:</b></td>
+    <td class="tCell" align="left">Evaluated</td>
+
+
+
+    <td class="rtbCell" rowspan="2">&nbsp;</td>
+
+
+   </tr>
+
+   <tr>
+    <td class="lbCell" align="left"><b>Evaluation:</b></td>
+    <td class="bCell" align="left">0.0000</td>
+   </tr>   <tr>
+    <td class="lrtbCell" colspan="3" align="left"><ul><li><b>Evaluator: computer</b><ul><li>Program compiled</li><li>Test 'Basic test using example data': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.006 s (limit: 2.000 s)</li><li>Total run time: 0.016 s</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on small dataset': failed<ul><li>result: 91.80 %, required: 100.00 %</li><li>Max. run time: 0.007 s (limit: 2.000 s)</li><li>Total run time: 0.319 s (limit: 10.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test failed, evaluation: 0.00 %</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li></ul></li>
+<li>Overall ratio: 0.00 % (= 1.00 * 0.00)</li></ul></li><li>Total percent: 0.00 %</li><li>Early submission bonus: 0.50</li><li>Total points: 0.00 * ( 2.00 + 0.50 ) = 0.00</li></ul></td>
+   </tr> <tr>
+  <td class="ltbCell" align="left"><b>SW metrics:</b></td>
+  <td class="rtbCell" colspan="2" align="left">
+   <table border="0" cellpadding="2">
+    <tbody><tr>
+     <td>&nbsp;</td>
+     <td class="ac">Total</td>
+     <td class="ac">Average</td>
+     <td class="ac">Maximum</td>
+     <td>Function name</td>
+    </tr>
+    <tr>
+     <td>Functions:</td>
+     <td class="ar"><b>4</b></td>
+     <td class="ar">--</td>
+     <td class="ar">--</td>
+     <td>--</td>
+    </tr>
+    <tr>
+     <td>Lines of code:</td>
+     <td class="ar"><b>57</b></td>
+     <td class="ar"><span class="textOk">14.25 ± 8.47</span></td>
+     <td class="ar"><span class="textOk">28</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+    <tr>
+     <td>Cyclomatic complexity:</td>
+     <td class="ar"><b>18</b></td>
+     <td class="ar"><span class="textOk">4.50 ± 3.77</span></td>
+     <td class="ar"><span class="textOk">11</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+   </tbody></table>
+  </td>
+ </tr>   </tbody></table>
+  </div>
+ </div> <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table width="100%" border="0" cellspacing="0" cellpadding="2" id="maintable">
+    <colgroup><col width="200">
+    <col>
+    <col width="130">
+
+   </colgroup><tbody><tr>
+    <td class="ltbFailSepCell" align="left"><b>4</b></td>
+    <td class="tbFailSepCell" align="left"><b>2019-10-07 19:28:08</b></td>
+    <td class="rtbFailSepCell" align="center"><div class="but1 w120"><div class="but2"><a class="butLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskD&amp;Cou=288&amp;Tgr=1794&amp;Tsk=1612&amp;Sub=1085573">Download</a></div></div></td>
+   </tr>
+   <tr>
+    <td class="ltCell" align="left"><b>Submission status:</b></td>
+    <td class="tCell" align="left">Evaluated</td>
+
+
+
+    <td class="rtbCell" rowspan="2">&nbsp;</td>
+
+
+   </tr>
+
+   <tr>
+    <td class="lbCell" align="left"><b>Evaluation:</b></td>
+    <td class="bCell" align="left">0.0000</td>
+   </tr>   <tr>
+    <td class="lrtbCell" colspan="3" align="left"><ul><li><b>Evaluator: computer</b><ul><li>Program compiled</li><li>Test 'Basic test using example data': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.006 s (limit: 2.000 s)</li><li>Total run time: 0.015 s</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on small dataset': failed<ul><li>result: 91.80 %, required: 100.00 %</li><li>Max. run time: 0.005 s (limit: 2.000 s)</li><li>Total run time: 0.242 s (limit: 10.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test failed, evaluation: 0.00 %</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li></ul></li>
+<li>Overall ratio: 0.00 % (= 1.00 * 0.00)</li></ul></li><li>Total percent: 0.00 %</li><li>Early submission bonus: 0.50</li><li>Total points: 0.00 * ( 2.00 + 0.50 ) = 0.00</li></ul></td>
+   </tr> <tr>
+  <td class="ltbCell" align="left"><b>SW metrics:</b></td>
+  <td class="rtbCell" colspan="2" align="left">
+   <table border="0" cellpadding="2">
+    <tbody><tr>
+     <td>&nbsp;</td>
+     <td class="ac">Total</td>
+     <td class="ac">Average</td>
+     <td class="ac">Maximum</td>
+     <td>Function name</td>
+    </tr>
+    <tr>
+     <td>Functions:</td>
+     <td class="ar"><b>4</b></td>
+     <td class="ar">--</td>
+     <td class="ar">--</td>
+     <td>--</td>
+    </tr>
+    <tr>
+     <td>Lines of code:</td>
+     <td class="ar"><b>64</b></td>
+     <td class="ar"><span class="textOk">16.00 ± 7.65</span></td>
+     <td class="ar"><span class="textOk">28</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+    <tr>
+     <td>Cyclomatic complexity:</td>
+     <td class="ar"><b>20</b></td>
+     <td class="ar"><span class="textOk">5.00 ± 3.54</span></td>
+     <td class="ar"><span class="textOk">11</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+   </tbody></table>
+  </td>
+ </tr>   </tbody></table>
+  </div>
+ </div> <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table width="100%" border="0" cellspacing="0" cellpadding="2" id="maintable">
+    <colgroup><col width="200">
+    <col>
+    <col width="130">
+
+   </colgroup><tbody><tr>
+    <td class="ltbFailSepCell" align="left"><b>3</b></td>
+    <td class="tbFailSepCell" align="left"><b>2019-10-07 19:26:30</b></td>
+    <td class="rtbFailSepCell" align="center"><div class="but1 w120"><div class="but2"><a class="butLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskD&amp;Cou=288&amp;Tgr=1794&amp;Tsk=1612&amp;Sub=1085572">Download</a></div></div></td>
+   </tr>
+   <tr>
+    <td class="ltCell" align="left"><b>Submission status:</b></td>
+    <td class="tCell" align="left">Evaluated</td>
+
+
+
+    <td class="rtbCell" rowspan="2">&nbsp;</td>
+
+
+   </tr>
+
+   <tr>
+    <td class="lbCell" align="left"><b>Evaluation:</b></td>
+    <td class="bCell" align="left">0.0000</td>
+   </tr>   <tr>
+    <td class="lrtbCell" colspan="3" align="left"><ul><li><b>Evaluator: computer</b><ul><li>Program compiled</li><li>Test 'Basic test using example data': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.007 s (limit: 2.000 s)</li><li>Total run time: 0.020 s</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on small dataset': failed<ul><li>result: 91.80 %, required: 100.00 %</li><li>Max. run time: 0.007 s (limit: 2.000 s)</li><li>Total run time: 0.381 s (limit: 10.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test failed, evaluation: 0.00 %</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li><li>Failed (invalid output)</li></ul></li>
+<li>Overall ratio: 0.00 % (= 1.00 * 0.00)</li></ul></li><li>Total percent: 0.00 %</li><li>Early submission bonus: 0.50</li><li>Total points: 0.00 * ( 2.00 + 0.50 ) = 0.00</li></ul></td>
+   </tr> <tr>
+  <td class="ltbCell" align="left"><b>SW metrics:</b></td>
+  <td class="rtbCell" colspan="2" align="left">
+   <table border="0" cellpadding="2">
+    <tbody><tr>
+     <td>&nbsp;</td>
+     <td class="ac">Total</td>
+     <td class="ac">Average</td>
+     <td class="ac">Maximum</td>
+     <td>Function name</td>
+    </tr>
+    <tr>
+     <td>Functions:</td>
+     <td class="ar"><b>4</b></td>
+     <td class="ar">--</td>
+     <td class="ar">--</td>
+     <td>--</td>
+    </tr>
+    <tr>
+     <td>Lines of code:</td>
+     <td class="ar"><b>63</b></td>
+     <td class="ar"><span class="textOk">15.75 ± 7.26</span></td>
+     <td class="ar"><span class="textOk">27</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+    <tr>
+     <td>Cyclomatic complexity:</td>
+     <td class="ar"><b>19</b></td>
+     <td class="ar"><span class="textOk">4.75 ± 3.11</span></td>
+     <td class="ar"><span class="textOk">10</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+   </tbody></table>
+  </td>
+ </tr>   </tbody></table>
+  </div>
+ </div> <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table width="100%" border="0" cellspacing="0" cellpadding="2" id="maintable">
+    <colgroup><col width="200">
+    <col>
+    <col width="130">
+
+   </colgroup><tbody><tr>
+    <td class="ltbOkSepCell" align="left"><b>2</b></td>
+    <td class="tbOkSepCell" align="left"><b>2019-10-07 19:02:11</b></td>
+    <td class="rtbOkSepCell" align="center"><div class="but1 w120"><div class="but2"><a class="butLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskD&amp;Cou=288&amp;Tgr=1794&amp;Tsk=1612&amp;Sub=1085564">Download</a></div></div></td>
+   </tr>
+   <tr>
+    <td class="ltCell" align="left"><b>Submission status:</b></td>
+    <td class="tCell" align="left">Evaluated</td>
+
+
+
+    <td class="rtbCell" rowspan="2">&nbsp;</td>
+
+
+   </tr>
+
+   <tr>
+    <td class="lbCell" align="left"><b>Evaluation:</b></td>
+    <td class="bCell" align="left">2.5000</td>
+   </tr>   <tr>
+    <td class="lrtbCell" colspan="3" align="left"><ul><li><b>Evaluator: computer</b><ul><li>Program compiled</li><li>Test 'Basic test using example data': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.006 s (limit: 2.000 s)</li><li>Total run time: 0.016 s</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on small dataset': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.046 s (limit: 2.000 s)</li><li>Total run time: 0.348 s (limit: 10.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on medium dataset': Abnormal program termination  (Time limit exceeded)<ul><li>Program was killed after: 2.000 s (limit: 2.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Bonus test - failed, evaluation: No bonus awarded</li><li>Time limit exceeded</li></ul></li>
+<li>Test 'Test on large dataset': Not tested<ul><li>Bonus test - failed, evaluation: No bonus awarded</li></ul></li>
+<li>Overall ratio: 100.00 % (= 1.00 * 1.00)</li></ul></li><li>Total percent: 100.00 %</li><li>Early submission bonus: 0.50</li><li>Total points: 1.00 * ( 2.00 + 0.50 ) = 2.50</li></ul></td>
+   </tr> <tr>
+  <td class="ltbCell" align="left"><b>SW metrics:</b></td>
+  <td class="rtbCell" colspan="2" align="left">
+   <table border="0" cellpadding="2">
+    <tbody><tr>
+     <td>&nbsp;</td>
+     <td class="ac">Total</td>
+     <td class="ac">Average</td>
+     <td class="ac">Maximum</td>
+     <td>Function name</td>
+    </tr>
+    <tr>
+     <td>Functions:</td>
+     <td class="ar"><b>4</b></td>
+     <td class="ar">--</td>
+     <td class="ar">--</td>
+     <td>--</td>
+    </tr>
+    <tr>
+     <td>Lines of code:</td>
+     <td class="ar"><b>54</b></td>
+     <td class="ar"><span class="textOk">13.50 ± 7.23</span></td>
+     <td class="ar"><span class="textOk">25</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+    <tr>
+     <td>Cyclomatic complexity:</td>
+     <td class="ar"><b>16</b></td>
+     <td class="ar"><span class="textOk">4.00 ± 2.92</span></td>
+     <td class="ar"><span class="textOk">9</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+   </tbody></table>
+  </td>
+ </tr>   </tbody></table>
+  </div>
+ </div> <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table width="100%" border="0" cellspacing="0" cellpadding="2" id="maintable">
+    <colgroup><col width="200">
+    <col>
+    <col width="130">
+
+   </colgroup><tbody><tr>
+    <td class="ltbHalfSepCell" align="left"><b>1</b></td>
+    <td class="tbHalfSepCell" align="left"><b>2019-10-07 18:44:28</b></td>
+    <td class="rtbHalfSepCell" align="center"><div class="but1 w120"><div class="but2"><a class="butLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskD&amp;Cou=288&amp;Tgr=1794&amp;Tsk=1612&amp;Sub=1085560">Download</a></div></div></td>
+   </tr>
+   <tr>
+    <td class="ltCell" align="left"><b>Submission status:</b></td>
+    <td class="tCell" align="left">Evaluated</td>
+
+
+
+    <td class="rtbCell" rowspan="2">&nbsp;</td>
+
+
+   </tr>
+
+   <tr>
+    <td class="lbCell" align="left"><b>Evaluation:</b></td>
+    <td class="bCell" align="left">2.2500</td>
+   </tr>   <tr>
+    <td class="lrtbCell" colspan="3" align="left"><ul><li><b>Evaluator: computer</b><ul><li>Compile in 'pedantic' mode failed (10 % penalty).</li><li>Test 'Basic test using example data': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.006 s (limit: 2.000 s)</li><li>Total run time: 0.017 s</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on small dataset': success<ul><li>result: 100.00 %, required: 100.00 %</li><li>Max. run time: 0.042 s (limit: 2.000 s)</li><li>Total run time: 0.405 s (limit: 10.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Mandatory test success, evaluation: 100.00 %</li></ul></li>
+<li>Test 'Test on medium dataset': Abnormal program termination  (Time limit exceeded)<ul><li>Program was killed after: 2.003 s (limit: 2.000 s)</li><li>Peak mem usage: 13068 KiB (limit: 125570 KiB)</li><li>Bonus test - failed, evaluation: No bonus awarded</li><li>Time limit exceeded</li></ul></li>
+<li>Test 'Test on large dataset': Not tested<ul><li>Bonus test - failed, evaluation: No bonus awarded</li></ul></li>
+<li>Overall ratio: 90.00 % (= (1.00 * 1.00) * 0.9)</li></ul></li><li>Total percent: 90.00 %</li><li>Early submission bonus: 0.50</li><li>Total points: 0.90 * ( 2.00 + 0.50 ) = 2.25</li></ul></td>
+   </tr> <tr>
+  <td class="ltbCell" align="left"><b>SW metrics:</b></td>
+  <td class="rtbCell" colspan="2" align="left">
+   <table border="0" cellpadding="2">
+    <tbody><tr>
+     <td>&nbsp;</td>
+     <td class="ac">Total</td>
+     <td class="ac">Average</td>
+     <td class="ac">Maximum</td>
+     <td>Function name</td>
+    </tr>
+    <tr>
+     <td>Functions:</td>
+     <td class="ar"><b>4</b></td>
+     <td class="ar">--</td>
+     <td class="ar">--</td>
+     <td>--</td>
+    </tr>
+    <tr>
+     <td>Lines of code:</td>
+     <td class="ar"><b>51</b></td>
+     <td class="ar"><span class="textOk">12.75 ± 7.50</span></td>
+     <td class="ar"><span class="textOk">25</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+    <tr>
+     <td>Cyclomatic complexity:</td>
+     <td class="ar"><b>16</b></td>
+     <td class="ar"><span class="textOk">4.00 ± 2.92</span></td>
+     <td class="ar"><span class="textOk">9</span></td>
+     <td><tt>doStep</tt></td>
+    </tr>
+   </tbody></table>
+  </td>
+ </tr>   </tbody></table>
+  </div>
+ </div>
+  </center>
+ </form>
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+<!--
+
+var deadLine = new Date ( 1571608799 * 1000 );
+
+function CBpressed ( num )
+ {
+   var pre, cb;
+
+   cb = MM_findObj ( "cb_" + num );
+   pre = MM_findObj ( "pre_" + num );
+   if ( cb != null && pre != null )
+    {
+      pre . style . display = cb . checked ? "block" : "none";
+    }
+ }
+
+function unlockAdvice ( url )
+ {
+   if ( confirm ( 'The number of available advices is limited. Moreover, the use of advices may decrease the evaluation. Really unlock this advice?' ) )
+    this . location = url;
+ }
+
+function setCountdown ( )
+ {
+   var d = new Date ();
+   var x = ( deadLine . getTime () - d . getTime () );
+   var tgt = document . getElementById ( "countdown" );
+
+   if ( x > 0 )
+    {
+      var s = Math . floor ( x / 1000 );
+      var ms = (x % 1000) + "";
+
+      while ( ms . length  < 3 ) ms = "0" + ms;
+
+      tgt . innerHTML = s + "." + ms + " sec";
+
+      window . setTimeout ( setCountdown, 117 );
+    }
+   else
+    {
+      tgt . innerHTML = '&nbsp;';
+    }
+ }
+
+function showRefSolution ( )
+ {
+   var t = document . getElementById ( "reftable" );
+   var x = document . getElementsByName ( "SHOW_REF" )[0];
+
+   if ( ! x ) return;
+   var r1 = t . rows[1], r2 = t . rows[2];
+
+   if ( x . checked )
+    {
+      r1 . style . display = "";
+      if ( r2 ) r2 . style . display = "";
+    }
+   else
+    {
+      r1 . style . display = "none";
+      if ( r2 ) r2 . style . display = "none";
+    }
+ }
+
+
+setCountdown ();
+showRefSolution ();
+
+// -->
+</script>
+
+
+
+
+
+ 
+
+<!-- Template run time: 0.024055004119873 sec -->
+</body></html>
